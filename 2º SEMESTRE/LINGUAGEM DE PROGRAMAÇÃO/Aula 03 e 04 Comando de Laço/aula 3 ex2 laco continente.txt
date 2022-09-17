@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <conio.h>
+
+
+
+int main()
+{
+  /* Declaracao de variaveis*/
+     
+     int i,n, populacao;
+     float altitude, maior, media, qpa,qpe;
+     char continente;
+  
+/* Ler N */
+   
+   printf("\n Entre com o numero de paises: ");
+   scanf("%d", &n);
+  
+/* Zerar ou inicializar variveis */
+
+  media=0;
+  qpa=0;
+  qpe=0; 
+  
+  
+/*  Laco */
+  i=1; /* inicializacao */
+  
+  while (i<=n)    /* teste  */
+  { printf("\n Dados da %d %c pais ", i, 167);
+    printf("\n Altitude: ");
+    scanf("%f", &altitude);
+    printf("\n populacao: ");
+    scanf("%d", &populacao);
+    printf("\n continente: (F - África, M – América, S – Ásia, O – Oceania, E - Europa) ");
+    continente = getche();
+    
+/****************ITEM A**********************/
+    
+  if (i==1) maior = altitude;
+     else if (maior<altitude) maior = altitude;   
+
+/****************ITEM B**********************/
+    if ((continente=='S') || (continente=='s')) qpa++;
+   
+
+/****************ITEM C**********************/
+    if ((continente=='E') || (continente=='e'))
+      {media =media+populacao;
+       qpe++;
+      }
+
+     
+     i++; /*incremento*/
+  }
+  
+  printf("\n Maior altitude = %.2f", maior);
+  
+  printf("\n Porcentagem de paises asiaticos = %.2f%% ", 100.0*qpa/n);
+  if (qpe!=0) printf("\n A Media populacional da Europa = %.2f", media/qpe);
+         else printf("\n Nao tem pais Europeu, portanto nao podemos calcular");
+  
+  return 0;
+}

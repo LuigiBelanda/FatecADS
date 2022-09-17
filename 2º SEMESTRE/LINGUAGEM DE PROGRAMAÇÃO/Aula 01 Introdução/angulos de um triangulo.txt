@@ -1,0 +1,23 @@
+#include <stdio.h> 
+
+int main () {
+  float a1,a2,a3;
+
+  printf("Entre com o primeiro angulo a1: ");
+  scanf ("%f", &a1);
+  printf("Entre com o segundo angulo  a2: ");
+  scanf ("%f", &a2);
+  printf("Entre com o terceiro angulo a3: ");
+  scanf ("%f", &a3);
+  if ((a1+a2+a3) != 180) printf("a soma dos angulos não forma triangulo");
+    else
+    {
+        if ((a1 == 90) || (a2 == 90) || (a3==90))
+            printf(" Os angulos %f, %f, %f formam um triangulo retângulo",a1,a2,a3);
+          else if ((a1 > 90) || (a2 > 90) || (a3>90))
+             printf(" Os angulos %f, %f, %f formam um triangulo obtusangulo",a1,a2,a3);
+              else printf(" Os angulos %f, %f, %f formam um triangulo acutangulo",a1,a2,a3);
+    }
+
+return 0;
+}

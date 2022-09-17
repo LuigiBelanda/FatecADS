@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{ float salario, inss, ir, salarioliquido, calculoir;
+  printf("\n Entre com o salário: ");
+  scanf("%f", &salario);
+  if (salario<=1212) inss = salario * 7.5/100; // 0,075
+     else if (salario<= 2427.35) inss = (salario - 1212)* 9/100 + 1212 * 7.5/100;
+         else if (salario<= 3641.03) inss = (salario -2427.35 ) * 12/100 + (2427.35-1212)*9/100 + 1212*7.5/100;
+              else if (salario<= 7087.22) inss = (salario - 3641.03)*14/100 + (3641.03-2427.35)*12/100 + (2427.35-1212)*9/100 + 1212*7.5/100;
+                    else inss = 828.39;
+
+
+   printf("\n Salario = %.2f  paga INSS = %.2f e recebe liquidos = %.2f", salario, inss, salario-inss);
+   calculoir = salario-inss;
+   if (calculoir<= 1903.98) {ir=0;
+                            }
+        else {if (calculoir<= 2826.65) {ir = (calculoir)*0.075 - 142.80;
+                                       }
+               else {if (calculoir<= 3751.05) {ir = (calculoir)*0.15 - 354.80;
+                                              }
+                   else {if (calculoir<= 4664.68) {ir = (calculoir)*0.225 - 636.13;
+                                                  }
+                             else   {ir = (calculoir)*0.275 - 869.36;
+                                    }
+                        }
+                     }
+        }
+   salarioliquido=calculoir-ir;
+   printf("\n Sal Bruto = %.2f \n INSS = %.2f \n  IR = %.2f \n Sal Liq = %.2f \n", salario, inss,ir,salarioliquido);
+   return 0;
+}

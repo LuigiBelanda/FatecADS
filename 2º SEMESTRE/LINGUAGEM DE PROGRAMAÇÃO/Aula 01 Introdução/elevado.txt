@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  int a, b;
+
+  a = 10;
+  b = 5;
+  printf("a elevado b: %lf\n",pow(a,b));
+  printf("a elevado b: %lf\n",exp(b*log(a)));
+  return 0;
+
+  /* Não existe a^b... */
+}

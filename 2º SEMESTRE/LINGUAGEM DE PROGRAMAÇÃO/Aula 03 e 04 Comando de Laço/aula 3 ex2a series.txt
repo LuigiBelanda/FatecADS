@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,n,a,b,c;
+    float s, sinal;
+    printf("\n Entre com o numero de termos: ");
+    scanf("%d",&n);
+    a=5; b=2; s=0; sinal=1.0;c=3;
+    printf("\n");
+    for (i=1; i<=n; i++)
+    {
+        s= s + sinal*a/b;
+        if (sinal>0)  printf(" + %d/%d", a,b);
+               else   printf(" - %d/%d", a,b);
+        a=a*4;
+        b=b*c;
+        c=c+1;
+        sinal =-sinal; 
+    }
+    printf("\n s = %.2f", s);
+    return 0;
+}
