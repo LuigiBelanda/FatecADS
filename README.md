@@ -3,7 +3,7 @@
 
 <br>
 
-<h2>📚 Matérias 1º semestre</h2>
+<h2>📚 Matérias 1º semestre </h2>
 <ul>
     <li>Sistemas de Informação</li>
     <li>Matemática Discreta</li>
