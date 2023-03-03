@@ -22,3 +22,16 @@
     <li>Linguagem de Programação</li>
     <li>Cálculo</li>
 </ul>
+
+<br>
+
+<h2>📚 Matérias 3º semestre</h2>
+<ul>
+    <li>Estrutura de Dados</li>
+    <li>Contabilidade</li>
+    <li>Laboratório de Hardware</li>
+    <li>Interação Humano Computador</li>
+    <li>Inglês 1</li>
+    <li>Sistemas Operacionais</li>
+    <li>Programação WEB</li>
+</ul>
